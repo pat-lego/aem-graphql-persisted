@@ -15,3 +15,16 @@ Import the AEM GraphQL.postman_collection.json into Postman and then deploy the 
     - /conf/global/settings/graphql
     - /conf/global/settings/dam/cfm
     - /content/dam/contentfragments
+
+You can then run the Postman project and use the GET request to execute the GraphQL persisted query to see how it would look like.
+
+## ScreenShot Overview
+
+- Corrupt Binary Node: 
+    This means that the persisted query under /conf/<configBrowser>/settings/graphql/persistedQueries/<peristedQuery> has a corrupt or invalid binary, download the binary and validate that it is working from the GraphiQL. Fix any issues you have from the result of your tests
+- Failed To Save: 
+    This means that there is another persisted query with the same name and for that reason you cannot save this query, please change the name and try again.
+- Successful Invocation:
+    This is what a susccessful invocation looks like
+- Query Validation Error:
+    This occurs when you try to save your persisted query using the PUT request but the validation fails because one of the Content Fragment models/properties are not defined. Please use the GraphiQL editor to identify which property is incorrect and rectify it
