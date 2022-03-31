@@ -13,9 +13,7 @@
  |  See the License for the specific language governing permissions and
  |  limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <!-- ====================================================================== -->
@@ -35,6 +33,13 @@
     <packaging>content-package</packaging>
     <name>graphql-sample - All</name>
     <description>All content package for graphql-sample</description>
+
+    <repositories>
+        <repository>
+            <id>local-maven-repo</id>
+            <url>file:///${project.parent.basedir}/repository</url>
+        </repository>
+    </repositories>
 
     <!-- ====================================================================== -->
     <!-- B U I L D   D E F I N I T I O N                                        -->
@@ -77,6 +82,12 @@
                             <type>zip</type>
                             <target>/apps/aemgraphql-packages/application/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.adobe.aem</groupId>
+                            <artifactId>graphiql</artifactId>
+                            <type>zip</type>
+                            <target>/apps/aemgraphql-packages/application/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -108,7 +119,7 @@
                     <execution>
                         <id>aem-analyser</id>
                         <goals>
-                            <goal>project-analyse</goal>                           
+                            <goal>project-analyse</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -171,7 +182,7 @@
                     </plugin>
                 </plugins>
             </build>
-    </profile>
+        </profile>
     </profiles>
 
     <!-- ====================================================================== -->
@@ -194,6 +205,13 @@
             <groupId>com.adobe.aem</groupId>
             <artifactId>graphql.ui.config</artifactId>
             <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>graphiql</artifactId>
+            <version>0.0.6</version>
             <type>zip</type>
         </dependency>
 
