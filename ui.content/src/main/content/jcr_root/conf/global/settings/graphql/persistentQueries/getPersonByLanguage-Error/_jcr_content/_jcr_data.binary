@@ -1,0 +1,21 @@
+{
+  personList(filter:{
+    language: {
+      language: {
+        _expressions: [ 
+          {
+          	value: "fr"
+        	}
+        ]
+      }
+    }
+  }) {
+    items {
+      _path,
+      firstName
+      language {
+        language
+      }
+  	}
+  }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/aemgraphql/clientlibs"/>
+    <filter root="/apps/aemgraphql/components"/>
+    <filter root="/apps/aemgraphql/i18n"/>
+</workspaceFilter>

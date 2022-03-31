@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="01d513f9-38f8-4a3b-84b2-a3b73b8341ce">
+    <jcr:content
+        cq:name="patrique"
+        cq:parentPath="/content/dam/contentfragments"
+        jcr:lastModified="{Date}2022-03-31T12:21:14.427-04:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Patrique"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2022-03-31T12:21:14.427-04:00">
+        <data
+            cq:model="/conf/global/settings/dam/cfm/models/person"
+            jcr:primaryType="nt:unstructured">
+            <master
+                cq:tags="[contentfragments:english,contentfragments:person]"
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                firstName="Patrique"
+                firstName_x0040_LastModified="{Date}2022-03-31T12:20:54.033-04:00"
+                label="Mr"
+                label_x0040_LastModified="{Date}2022-03-31T12:20:54.032-04:00"
+                language="/content/dam/contentfragments/english"
+                language_x0040_LastModified="{Date}2022-03-31T12:21:14.399-04:00"
+                lastName="Legault"
+                lastName_x0040_LastModified="{Date}2022-03-31T12:20:54.033-04:00"
+                tags="[contentfragments:person,contentfragments:english]"
+                tags_x0040_LastModified="{Date}2022-03-31T12:21:14.399-04:00"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
