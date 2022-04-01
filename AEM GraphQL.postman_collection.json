@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Get GraphQL Peristed Query",
+			"name": "Get GraphQL Peristed Query Error",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -36,7 +36,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4502/graphql/execute.json/global/getPersonByLanguage",
+					"raw": "http://localhost:4502/graphql/execute.json/global/getPersonByLanguage-Error",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -46,7 +46,7 @@
 						"graphql",
 						"execute.json",
 						"global",
-						"getPersonByLanguage"
+						"getPersonByLanguage-Error"
 					]
 				}
 			},
@@ -89,6 +89,53 @@
 					"path": [
 						"graphql",
 						"persist.json",
+						"global",
+						"getPersonByLanguage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get GraphQL Peristed Query",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n  personList(filter:{\n    language: {\n      language: {\n        _expressions: [ \n          {\n          \tvalue: \"fr\"\n        \t}\n        ]\n      }\n    }\n  }) {\n    items {\n      _path,\n      firstName\n      language {\n        language\n      }\n  \t}\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4502/graphql/execute.json/global/getPersonByLanguage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"graphql",
+						"execute.json",
 						"global",
 						"getPersonByLanguage"
 					]
