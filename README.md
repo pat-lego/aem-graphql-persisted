@@ -21,7 +21,7 @@ You can then run the Postman project and use the GET request to execute the Grap
 ## ScreenShot Overview
 
 - Corrupt Binary Node: 
-    This means that the persisted query under /conf/<configBrowser>/settings/graphql/persistedQueries/<peristedQuery> has a corrupt or invalid binary, download the binary and validate that it is working from the GraphiQL. Fix any issues you have from the result of your tests
+    This means that the persisted query under /conf/<configBrowser>/settings/graphql/persistedQueries/<peristedQuery> has a corrupt or invalid binary, download the binary and validate that it is working from the GraphiQL. Fix any issues you have from the result of your tests. If you download the binary and it is correct then its most likely related to the fact that your index has not picked up the new definition. Validate your indexes are running correctly and that checkpoints are being generated every 5 seconds.
 - Failed To Save: 
     This means that there is another persisted query with the same name and for that reason you cannot save this query, please change the name and try again.
 - Successful Invocation:
